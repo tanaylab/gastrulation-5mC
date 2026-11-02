@@ -1,0 +1,19 @@
+# data and outputs live on the cluster, not in the repo
+data/
+figs/
+*.RDS
+*.rds
+*.rda
+*.h5ad
+*.wig
+*.bw
+core.*
+
+.ipynb_checkpoints/
+.Rhistory
+.RData
+git_test/
+data
+
+# private notes, not for the public repo
+checkpoints/
