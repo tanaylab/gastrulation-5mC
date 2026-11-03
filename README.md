@@ -1,6 +1,7 @@
 # DNMT embryo paper: figure code
 
-Code for the figures of the DNMT knockout embryo paper: single-cell RNA, single-cell ATAC and spatial analyses of DNMT KO, DKO and TKO embryos, plus E9.5 brain DKO revision data.
+Analysis accompanying: **A weak-interaction model defines the cell-autonomous function of DNA methylation in gastrulation**.
+Saifeng Cheng, Roni Stok Ranen, Marthe Marie Behrends, Yoav Mayshar, Ofir Raz, Shuailin Du, Aviezer Lifshitz, Ying Zhu, Evgheni Casimov, Tal Sokolov, Akhiad Bercovich, Raz Ben-Yair, Oren Ben-Kiki, Netta Reines, Ayelet-Hashahar Orenbuch, Jinfang Wang, Yonatan Stelzer, and Amos Tanay.
 
 ## Layout
 
