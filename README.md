@@ -2,13 +2,6 @@
 
 Code for the figures of the DNMT knockout embryo paper: single-cell RNA, single-cell ATAC and spatial analyses of DNMT KO, DKO and TKO embryos, plus E9.5 brain DKO revision data.
 
-The code is as it was run for the published figures. Changes from the original analysis code:
-- hardcoded paths moved into `paths.R`; functions moved from the notebooks into `scripts/`
-- exploratory, stale and unused code that makes no paper panel removed
-- `Fig2.ipynb` repaired to run top to bottom (the stored session relied on globals no cell defined): `scripts/rna_projection_func.r` functions take the feature gene set, downsampled atlas and its metadata as arguments, and the Fig 2a/2c modules are restricted to the feature gene set, which reproduces the published panels
-- Fig 1i downsampling uses the seeds the original session drew (8056, 4958), so it reproduces the published heatmap
-- notebooks merged per figure (Fig 5, Fig 6) and preprocessing moved to `prep/`
-
 ## Layout
 
 - `*.ipynb`: Fig 1-5, Extended Data and Supplementary table notebooks; run from the repo root
