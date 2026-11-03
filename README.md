@@ -60,16 +60,7 @@ Figures:
 - **E9.5 motif energies of the CREs** (`energ_cre_*.RDS`, for Fig 6): `prep/E9.5_motif_energies.ipynb`
 
 ## Data
-
-The data are not in the repo. They have been deposited in the GEO and will be available upon publication.
-
-Main inputs:
-- `data/MC_models/*.h5ad`: metacell models per genotype and the WT atlas
-- `data/output/*.RDS`: cached ATAC model (`mod.RDS`), motif and trend tables, screens
-- `data/ref/`, `data/summary/`, `data/download/`: annotations, TSS clusters, published gene lists (Weber et al.)
-- `revision_e95/data/`: E9.5 DKO brain cells, metacells, annotations
-
-Raw and processed sequencing data: GEO (accession in the paper).
+The data are not in the repo. They have been deposited in the GEO and will become available upon publication.
 
 ### External resources
 
