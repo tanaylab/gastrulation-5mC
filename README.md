@@ -61,7 +61,7 @@ Figures:
 
 ## Data
 
-The data are not in the repo (`data/` ~88 GB, `revision_e95/data/` ~11 GB). Set `embdnmt_dir` in `paths.R` to the original analysis directory, which holds `data/` and `revision_e95/data/`. The root notebooks read `./data/` from the repo root, so link it: `data` -> `embdnmt_dir/data`. Notebooks in `prep/` and `E9.5_multiome.Fig6/` change into `embdnmt_dir` (or `embdnmt_dir/revision_e95`) themselves.
+The data are not in the repo. They have been deposited in the GEO and will be available upon publication.
 
 Main inputs:
 - `data/MC_models/*.h5ad`: metacell models per genotype and the WT atlas
