@@ -1,7 +1,10 @@
 # DNMT embryo paper: figure code
 
-Analysis accompanying: **A weak-interaction model defines the cell-autonomous function of DNA methylation in gastrulation**.
-Saifeng Cheng, Roni Stok Ranen, Marthe Marie Behrends, Yoav Mayshar, Ofir Raz, Shuailin Du, Aviezer Lifshitz, Ying Zhu, Evgheni Casimov, Tal Sokolov, Akhiad Bercovich, Raz Ben-Yair, Oren Ben-Kiki, Netta Reines, Ayelet-Hashahar Orenbuch, Jinfang Wang, Yonatan Stelzer, and Amos Tanay.
+Figure code for the paper:
+
+> **A weak-interaction model defines the cell-autonomous function of DNA methylation in gastrulation**
+>
+> Saifeng Cheng, Roni Stok Ranen, Marthe Marie Behrends, Yoav Mayshar, Ofir Raz, Shuailin Du, Aviezer Lifshitz, Ying Zhu, Evgheni Casimov, Tal Sokolov, Akhiad Bercovich, Raz Ben-Yair, Oren Ben-Kiki, Netta Reines, Ayelet-Hashahar Orenbuch, Jinfang Wang, Yonatan Stelzer, and Amos Tanay.
 
 ## Layout
 
