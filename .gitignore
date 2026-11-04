@@ -13,6 +13,7 @@ core.*
 .Rhistory
 .RData
 git_test/
+paths_local.R
 data
 
 # private notes, not for the public repo

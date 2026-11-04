@@ -134,7 +134,7 @@ write_tracks <- function(raw_data, manual_choice_of_genotypes = NULL){
 	}
 
 	# Remove "^mc" from track names (function default)
-	base_track_dir = "/net/mraid20/export/tgdata/db/tgdb/mm10/trackdb/tracks/mut_multi2/"
+	base_track_dir = file.path(mm10_trackdb, "tracks/mut_multi2/")
 	for (genotype in genotypes){
 		subdir = paste0(base_track_dir, genotype)
 		setwd(subdir)

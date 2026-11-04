@@ -1,24 +1,7 @@
 # Locations of the data and external resources used by the notebooks and scripts.
-# Edit these to point at your copies. Notebooks source this file in their first cell
-# ("paths.R" from the repo root, "../paths.R" from prep/ and E9.5_multiome.Fig6/).
-
-# Original analysis directory: holds data/, figs/ and revision_e95/data/.
-# Notebooks setwd() here, so relative ./data/... and ./scripts/... paths resolve against it.
-embdnmt_dir <- "/net/mraid20/ifs/wisdom/tanay_lab/tgdata/users/ronisto/proj/DNMT_final/embdnmt"
-
-# WT gastrulation atlas (spatwt, iteration 10.5.5)
-spatwt_dir <- "/net/mraid20/export/tgdata/users/talso/eexplorer_ng/scrna_db/spatwt/iterative/iteration-10.5.5"
-
-# misha genome database (mm10 trackdb)
-mm10_trackdb <- "/net/mraid20/export/tgdata/db/tgdb/mm10/trackdb"
-
-# 10x multiome / ATAC pipeline outputs
-tg_atac_dir <- "/net/mraid20/export/tgdata/db/tgdb/tg_atac"
-multiome_dir <- "/net/mraid20/export/tgdata/users/ronisto/proj/multiome_all"
-
-# Motif models (motif_reg project) and development copies of tanaylab R packages
-motif_reg_dir <- "/home/aviezerl/proj/motif_reg"
-aviezerl_src_dir <- "/home/aviezerl/src"
+# Set them in paths_local.R next to this file (not tracked by git); it is read right after the
+# defaults below, which are NA. Notebooks source this file in their first cell ("paths.R" from the
+# repo root, "../paths.R" from prep/ and E9.5_multiome.Fig6/).
 
 # Repository root: the nearest directory, from the working directory up, that holds paths.R.
 # Code under scripts/ and E9.5_multiome.Fig6/ is sourced from here.
@@ -26,6 +9,36 @@ repo_dir <- local({
     d <- normalizePath(getwd())
     while (!file.exists(file.path(d, "paths.R")) && dirname(d) != d) d <- dirname(d)
     d
+})
+
+# Original analysis directory: holds data/, figs/ and revision_e95/data/.
+# Notebooks setwd() here, so relative ./data/... and ./scripts/... paths resolve against it.
+embdnmt_dir <- NA_character_
+# Parent project of embdnmt: embryo metadata, the metacell database (scdb/) and the transcriptional
+# time inference (my_data/; used by prep/transcriptional_time.ipynb and Fig S2D in ExtData_RNA.ipynb)
+dnmt_final_dir <- NA_character_
+# WT gastrulation atlas (spatwt, iteration 10.5.5)
+spatwt_dir <- NA_character_
+# misha genome database (mm10 trackdb)
+mm10_trackdb <- NA_character_
+# misha root of the TSS intervals used by prep/transcriptional_time.ipynb
+mm10_db_dir <- NA_character_
+# 10x multiome / ATAC pipeline outputs
+tg_atac_dir <- NA_character_
+multiome_dir <- NA_character_
+# E9.5 multiome inputs of prep/E9.5_atac_tracks.ipynb: single-cell ATAC counts,
+# cell_to_metacell.csv and the metacell projection
+e95_dir <- NA_character_
+# Motif models (motif_reg project) and development copies of tanaylab R packages
+motif_reg_dir <- NA_character_
+dev_src_dir <- NA_character_
+
+if (file.exists(file.path(repo_dir, "paths_local.R"))) source(file.path(repo_dir, "paths_local.R"))
+local({
+    unset <- Filter(function(v) is.na(get(v, envir = globalenv())),
+        c("embdnmt_dir", "dnmt_final_dir", "spatwt_dir", "mm10_trackdb", "mm10_db_dir",
+          "tg_atac_dir", "multiome_dir", "e95_dir", "motif_reg_dir", "dev_src_dir"))
+    if (length(unset) > 0) message("paths.R: set in paths_local.R: ", paste(unset, collapse = ", "))
 })
 
 # Everything the code writes (figures, RDS caches, tables) goes under out_dir.
@@ -176,10 +189,6 @@ show_fig <- function(file, plot = NULL, draw, show = TRUE, ...) {
     box <- as.numeric(strsplit(trimws(gsub("[^0-9. ]", " ", m)), " +")[[1]])
     box[3:4] / 72
 }
-
-# Parent project of embdnmt: embryo metadata, the metacell database (scdb/) and the transcriptional
-# time inference (my_data/; used by prep/transcriptional_time.ipynb and Fig S2D in ExtData_RNA.ipynb)
-dnmt_final_dir <- "/net/mraid20/ifs/wisdom/tanay_lab/tgdata/users/ronisto/proj/DNMT_final"
 
 # mm10 chromosome sizes for wigToBigWig (genome browser tracks, Fig4.ipynb)
 mm10_chrom_sizes <- file.path(embdnmt_dir, "hub_p2p_rnp/mm10/mm10.chrom.sizes")

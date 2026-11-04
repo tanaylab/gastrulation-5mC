@@ -12,7 +12,7 @@ Figure code for the paper:
 - `E9.5_multiome.Fig6/`: Fig 6 (`Fig6.ipynb`, E9.5 multiome of Dnmt-DKO chimera head parts) and its functions (`Fig6_func.r`, `e95_func.r`)
 - `prep/`: preprocessing notebooks that build the inputs of the figures (`E9.5_*` for Fig 6)
 - `scripts/`: R functions the notebooks source; notebooks define no functions themselves (except the python notebook `prep/embryo_profiles`)
-- `paths.R`: locations of the data and external resources; edit this first
+- `paths.R`: the variables for the data and external resources; set their locations in `paths_local.R` first
 
 How paths work:
 - Each R notebook starts with `source("paths.R")` (`source("../paths.R")` in `prep/` and `E9.5_multiome.Fig6/`). `paths.R` finds the repo root itself.
@@ -67,7 +67,7 @@ The data are not in the repo. They have been deposited in the GEO and will becom
 
 ### External resources
 
-Set in `paths.R`, except a few single-use inputs still referenced by absolute path:
+Their locations go in `paths_local.R` (not tracked; `paths.R` lists the variables and reads it):
 - misha genome database `mm10` (Tanay lab trackdb)
 - `dnmt_final_dir`: parent project with the embryo metadata, the metacell database and the transcriptional times for Fig S2D
 - WT gastrulation atlas `spatwt` (iteration 10.5.5)
